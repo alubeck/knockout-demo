@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="knockout-3.0.0.js"></script>
+
+<title>Example 1 with knockout</title>
+</head>
+<body>
+	
+<h3>Details</h3>
+
+<p>First name: <span data-bind="text: firstName"></span></p>
+<p>First name: <input data-bind="value: firstName"></input></p>
+
+<p>Last name: <span data-bind="text: lastName"></span></p>
+<p>Last name: <input data-bind="value: lastName"></input></p>
+
+
+
+
+<script type="text/javascript">
+	var viewModel = {
+		firstName	: ko.observable(),
+		lastName 	: ko.observable("this will be my lastname")
+	}
+	ko.applyBindings(viewModel);
+</script>
+
+</body>
+</html>
